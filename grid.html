@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="style_grid.css">
+    <style>*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+    min-height: 100%;
+}
+
+.grid-container>*{
+    box-shadow: -1px 1px 7px 0px rgba(red, green, blue, alpha);
+    border-radius: 2px;
+    padding: 10px;
+    text-align: center;
+}
+
+.header{
+    grid-area: header;
+    background-color: aquamarine;
+}
+
+.navbar{
+    grid-area: navbar;
+    background-color: bisque;
+}
+
+.main{
+    grid-area: main;
+    background-color: cadetblue;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: chocolate;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: cornflowerblue;
+}
+
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: "header"
+    "navbar"
+    "main"
+    "sidebar"
+    "footer"
+}
+@media (min-width:400px) {
+    .grid-container{
+        grid-template:
+        "header header" 100px
+        "navbar navbar" 50px
+        "sidebar main" auto
+        "footer footer" 100px/200px auto;
+    }
+}
+
+@media (main-width:600px){
+    
+}
+
+.grid-container{
+    grid-template:
+    "header header"
+    "navbar navbar"
+    "sidebar main"
+    "footer footer";
+}
+
+@media (min-width:900px){
+    .grid-container{
+        grid-template:
+        "header header header" 100px
+        "navbar main sidebar" auto
+        "footer footer footer" 100px/200px auto;
+    }
+}
+
+    </style>
+    
+</head>
+
+<body class="grid-container">
+    <header class="header">Garcia Izquierdo Adrian
+        <h3>Instituto Tecnologico de Gustavo A. Madero</header>
+
+    <nav class="navbar"> <h3><label for="file"> java:</label></h3>
+    <progress id="file"max="100" value="37"  style="width:50%">70% </progress>
+
+
+        <h4><label for="file"> html:</label></h4> <progress id="file"max="50" value="37" style="width:50%">70%</progress>
+        <h5><label for="file"> css:</label><h5> <progress id="file"max="50" value="37"  style="width:50%">70%</progress>
+        <h6><label for="file"> netbens:</label></h6> <progress id="file"max="50" value="37"  style="width:50%">70%</progress>
+        
+        
+        </nav>
+
+    <aside class="sidebar">Datos Personales
+        <br>Calle: Josefa ortiz de dominguez</br>
+    <br>Colonia: Nueva Aragon</br>
+<br>Codigo postal: 55260</br>
+</aside>
+    <article class="main"><img src="foto.jpg" width="450" height="280">
+    	<div>
+    me gusta jugar futbol ,soy de primer año de la carrera de tics</article>
+    <footer class="footer"><div>
+            <label for="email">correo</label><a href="adriangarciaizquierdo2003@gmail.com"
+            name="email">adriangarciaizquierdo2003@gmail.com</a>
+            <br>
+            <label for="telephone">tel.celular:</label><a href="tel:550909213" name="telephone">(52)55-09-09-213</a>
+            <br>
+            <label for="facebook">facebook</label><a href="facebook"
+            name="facebook">izquierdograciadrian </a>
+
+        </div></footer>
+
+
+</body>
+</html>
